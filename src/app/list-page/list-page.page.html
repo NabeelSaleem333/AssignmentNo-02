@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>List Of Books</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()"></ion-searchbar>
+  <ion-card>
+      <ion-card-content *ngFor="let book of books">
+
+      <a style="text-decoration: none;" href="book-detail//book-detail.page.html">{{book}}</a>
+        </ion-card-content>
+  </ion-card>
+</ion-content>
